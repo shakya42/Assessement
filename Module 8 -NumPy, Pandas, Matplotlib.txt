@@ -1,5 +1,5 @@
                                                  Module: 8 - NumPy, Pandas, Matplotlib
-                                                          ASSESSMENT 1
+                                                                  ASSESSMENT 1 
 
 1. Import pandas and read in the banklist.csv file into a dataframe called banks.
 import pandas as pd
