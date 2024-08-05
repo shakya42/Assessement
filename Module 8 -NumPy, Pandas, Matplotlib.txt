@@ -28,7 +28,6 @@ x = banks["ST"].unique()
 print(x)
 
 6. What are the top 5 states with the most failed banks?
-
 import pandas as pd
 banks = pd.read_csv("C:/Users/admin/Desktop/DATASETS/banklist.csv")
 x = banks.groupby("ST").size()
