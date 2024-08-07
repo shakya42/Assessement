@@ -3,33 +3,33 @@
 
 1. Import pandas and read in the banklist.csv file into a dataframe called banks.
 import pandas as pd
-banks = pd.read_csv("C:/Users/admin/Desktop/DATASETS/banklist.csv")
+banks = pd.read_csv("C:/Users/DELL//Desktop/banklist.csv")
 print(Banks)
 
 2. Show the head of the Dataframe.
 import pandas as pd
-banks = pd.read_csv("C:/Users/admin/Desktop/DATASETS/banklist.csv")
+banks = pd.read_csv("C:/Users/Dell/Desktop/DATASETS/banklist.csv")
 print(banks.head())
 
 3. What are the column names?
 import pandas as pd
-banks = pd.read_csv("C:/Users/admin/Desktop/DATASETS/banklist.csv")
+banks = pd.read_csv("C:/Users/DELL/Desktop/DATASETS/banklist.csv")
 print(banks.columns)
 
 4. How many States (ST) are represented in this data set?
 import pandas as pd
-banks = pd.read_csv("C:/Users/admin/Desktop/DATASETS/banklist.csv")
+banks = pd.read_csv("C:/Users/DELL/Desktop/DATASETS/banklist.csv")
 print(banks["ST"].nunique())
 
 5. Get a list or array of all the states in the data set.
 import pandas as pd
-banks = pd.read_csv("C:/Users/admin/Desktop/DATASETS/banklist.csv")
+banks = pd.read_csv("C:/Users/DELL/Desktop/DATASETS/banklist.csv")
 x = banks["ST"].unique()
 print(x)
 
 6. What are the top 5 states with the most failed banks?
 import pandas as pd
-banks = pd.read_csv("C:/Users/admin/Desktop/DATASETS/banklist.csv")
+banks = pd.read_csv("C:/Users/DELL/Desktop/DATASETS/banklist.csv")
 x = banks.groupby("ST").size()
 y = x.sort_values(ascending = False)
 z = y.head(5)
@@ -37,7 +37,7 @@ print(f'The top 5 failed banks : {z}')
 
 7. What are the top 5 acquiring institutions?
 import pandas as pd
-banks = pd.read_csv("C:/Users/admin/Desktop/DATASETS/banklist.csv")
+banks = pd.read_csv("C:/Users/DELL/Desktop/DATASETS/banklist.csv")
 x = banks.groupby("Acquiring Institution").size()
 y = x.sort_values(ascending = False)
 z = y.head(5)
@@ -45,7 +45,7 @@ print(z)
 
 8. How many banks has the State Bank of Texas acquired? How many of them were actually in Texas?
 import pandas as pd
-banks = pd.read_csv("C:/Users/admin/Desktop/DATASETS/banklist.csv")
+banks = pd.read_csv("C:/Users/DELL/Desktop/DATASETS/banklist.csv")
 x = banks[banks["Acquiring Institution"] == "State Bank of Texas"]
 y = x.shape[0]
 z = x[x["ST"] == "TX"].shape[0]
@@ -54,7 +54,7 @@ print(f'No of banks actually in Texas is : {z}')
 
 9. What is the most common city in California for a bank to fail in?
 import pandas as pd
-banks = pd.read_csv("C:/Users/admin/Desktop/DATASETS/banklist.csv")
+banks = pd.read_csv("C:/Users/DELL/Desktop/DATASETS/banklist.csv")
 x = banks[banks["ST"]=="CA"]
 y = x["City"].value_counts().idxmax()
 z = x["City"].value_counts().max()
