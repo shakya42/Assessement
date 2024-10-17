@@ -19,16 +19,19 @@ import numpy as np
 from scipy import stats
 
 # Data for girls
+
 mean_girls = 89
 std_girls = 4
 n_girls = 50
 
 # Data for boys
+
 mean_boys = 82
 std_boys = 9
 n_boys = 120
 
 # Calculate the t-value
+
 t_value = (mean_girls - mean_boys) / np.sqrt((std_girls**2 / n_girls) + (std_boys**2 / n_boys))
 df = n_girls + n_boys - 2  # degrees of freedom
 p_value = 2 * (1 - stats.t.cdf(np.abs(t_value), df))  # two-tailed p-value
@@ -37,6 +40,7 @@ print(f"t-value: {t_value:.2f}")
 print(f"p-value: {p_value:.4f}")
 
 # Conclusion
+
 if p_value < 0.05:
     print("Reject the null hypothesis: There is a significant difference between boys and girls with respect to intelligence.")
 else:
@@ -61,15 +65,18 @@ import numpy as np
 from scipy.stats import chi2_contingency
 
 # Observed data
+
 observed = np.array([[220, 230], [350, 640]])
 
 # Chi-square test
+
 chi2, p, dof, expected = chi2_contingency(observed)
 
 print(f"Chi-square value: {chi2:.2f}")
 print(f"p-value: {p:.4f}")
 
 # Conclusion
+
 if p < 0.05:
     print("Reject the null hypothesis: There is a significant relationship between smoking and cancer.")
 else:
